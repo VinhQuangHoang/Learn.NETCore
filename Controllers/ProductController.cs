@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BT_Tuan1.Models;
+using ProductManagement.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BT_Tuan1.Controllers
+namespace ProductManagement.Controllers
 {
     public class ProductController : Controller
     {
