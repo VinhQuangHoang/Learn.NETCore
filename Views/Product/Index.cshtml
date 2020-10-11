@@ -1,0 +1,39 @@
+﻿@model List<ProductViewModel>
+@{
+    ViewData["Title"] = "Products";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Products.</p>
+<a asp-controller="Product" asp-action="Add">Add</a>
+
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Color</th>
+            <th scope="col">Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td scope="row">@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Color</td>
+                <td>@item.Amount</td>
+
+            </tr>
+        }
+    </tbody>
+
+
+</table>
+
+@section Scripts {
+    <script src="~/js/product.js"></script>
+}

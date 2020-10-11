@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BT_Tuan1.Models
+namespace ProductManagement.Models
 {
     public class ProductViewModel
     {

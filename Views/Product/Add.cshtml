@@ -1,0 +1,62 @@
+﻿@model ProductViewModel
+@{
+    ViewData["Title"] = "Add Product";
+}
+<h1>@ViewData["Title"]</h1>
+
+@*<form asp-controller="Product" asp-action="Add">
+        <div>
+            <label asp-for="Id"></label>
+            <input type="text" asp-for="Id" value="" />
+        </div>
+        <div>
+            <label asp-for="Name"></label>
+            <input type="text" asp-for="Name" value="" />
+        </div>
+        <div>
+            <label asp-for="Color"></label>
+            <input type="text" asp-for="Color" value="" />
+        </div>
+        <div>
+            <label asp-for="Amount"></label>
+            <input type="text" asp-for="Amount" value="" />
+        </div>
+        <button type="submit">Add</button>
+    </form>*@
+
+<form asp-controller="Product" asp-action="Add">
+    <div class="form-group">
+        <label asp-for="Id"></label>
+        <input type="text" class="form-control" asp-for="Id" value="" placeholder="Enter Id">
+        <span asp-validation-for="Id" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Name" value=""></label>
+        <input type="text" class="form-control" value="" asp-for="Name" placeholder="Enter Name">
+        <span asp-validation-for="Name" class="text-danger"></span>
+
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Color" value=""></label>
+        <input type="text" class="form-control" value="" asp-for="Color" placeholder="Enter Color">
+        <span asp-validation-for="Color" class="text-danger"></span>
+
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Amount" value=""></label>
+        <input type="text" class="form-control" value="" asp-for="Amount" placeholder="Enter Amount">
+        <span asp-validation-for="Amount" class="text-danger"></span>
+        @*@Html.TextBoxFor(model => model.Amount, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Amount)*@
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
